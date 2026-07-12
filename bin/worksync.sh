@@ -41,10 +41,7 @@ build_index() {
     for f in "${REPO}"/shotlists/*.md; do
       [ -e "$f" ] || continue
       case "$f" in */INDEX.md) continue;; esac
-      local name="${f:t}"
-      local mt
-      mt=$(date -r "$f" '+%Y-%m-%d %H:%M' 2>/dev/null)
-      echo "| ${name} | ${mt} |"
+      echo "| ${f:t} | $(date -r "$f" '+%Y-%m-%d %H:%M' 2>/dev/null) |"
     done
   } > "$idx"
 }
