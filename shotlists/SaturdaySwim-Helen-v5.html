@@ -1,0 +1,241 @@
+<title>Shotlist: SaturdaySwim-Helen v5</title>
+<style>
+  :root{ --bg:#FCFCFD; --card:#FFFFFF; --ink:#17171A; --dim:#4F4F56; --faint:#8A8A92;
+    --line:#E7E7EB; --accent:#4F46E5; --title-bg:#EEEDFB; --sil:#93939B; --row:#FAFAFB; --dlg-bg:#F5F4FB;
+    --then:#8A8A92; --now:#0D9488; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:920px; margin:0 auto; padding:38px 20px 90px; }
+  .eyebrow{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1{ font-size:26px; line-height:1.15; margin:0 0 12px; }
+  .facts{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:8px; }
+  .chip{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--dim);
+    background:var(--card); border:1px solid var(--line); border-radius:7px; padding:3px 9px; }
+  .legend{ font-size:12.5px; color:var(--faint); margin:2px 0 0; }
+  .guardrail{ font-size:12.5px; color:var(--dim); margin:10px 0 0; background:var(--card);
+    border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:8px 12px; }
+  h2{ font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim);
+    margin:36px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); font-weight:600; }
+  .cast{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; }
+  .role{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:11px 13px; }
+  .role .nm{ font-weight:600; font-size:15px; }
+  .role .rl{ font-size:12.5px; color:var(--dim); margin-top:3px; line-height:1.4; }
+  .c-helen{ color:var(--accent); } .c-mia{ color:#059669; } .c-kate{ color:#0D9488; } .c-rita{ color:#B45309; } .c-guard{ color:#6D28D9; } .c-inst{ color:#DB2777; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table{ border-collapse:collapse; width:100%; min-width:720px; font-size:14px; }
+  thead th{ position:sticky; top:0; background:var(--card); text-align:left; font-weight:600; font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--dim); padding:11px 12px; border-bottom:1.5px solid var(--line); }
+  td{ padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; }
+  tbody tr:nth-child(even) td{ background:var(--row); }
+  .cfn{ width:42px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600; color:var(--accent); white-space:nowrap; }
+  .ctc{ width:72px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--faint); white-space:nowrap; }
+  .cloc{ width:120px; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--dim); }
+  ul.beats{ margin:0; padding:0; list-style:none; }
+  ul.beats li{ position:relative; padding-left:17px; margin:0 0 6px; color:var(--dim); }
+  ul.beats li:last-child{ margin:0; }
+  ul.beats li::before{ content:"›"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; }
+  ul.beats li b{ color:var(--ink); font-weight:600; }
+  ul.beats li.cam{ color:var(--faint); font-size:12.5px; }
+  ul.beats li.cam::before{ content:"◦"; color:var(--faint); font-weight:400; }
+  ul.beats li.dlg{ background:var(--dlg-bg); border-radius:8px; padding:7px 10px 7px 26px; margin:5px 0; color:var(--ink); }
+  ul.beats li.dlg::before{ content:"💬"; left:8px; font-size:12px; top:8px; }
+  li.dlg .spk{ font-weight:700; } li.dlg .rem{ font-style:italic; color:var(--faint); font-weight:400; font-size:13px; }
+  ul.beats li.titl{ text-align:center; color:var(--accent); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.06em; background:var(--title-bg); border-radius:8px; padding:6px; margin:6px 0; }
+  ul.beats li.titl::before{ content:""; }
+  ul.beats li.sil{ color:var(--sil); font-style:italic; } ul.beats li.sil::before{ content:"—"; color:var(--sil); }
+  .trow td{ background:var(--title-bg)!important; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.08em; color:var(--accent); font-size:13px; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141416; --card:#1C1C1F; --ink:#ECECEE; --dim:#B4B4BC; --faint:#7A7A82;
+      --line:#2A2A2E; --accent:#A5A0FF; --title-bg:#211F33; --sil:#6E6E77; --row:#191919; --dlg-bg:#201F2A; --now:#5EEAD4; }
+    .c-mia{ color:#6EE7B7; } .c-kate{ color:#5EEAD4; } .c-rita{ color:#FCD34D; } .c-guard{ color:#C4B5FD; } .c-inst{ color:#F9A8D4; }
+  }
+</style>
+<div class="wrap">
+  <p class="eyebrow">Microdrama shotlist · Tai Chi Femme · Skeleton X (два прогона одного дня)</p>
+  <h1>SaturdaySwim — Helen Story · v5</h1>
+  <div class="facts">
+    <span class="chip">9:16</span><span class="chip">~2:30</span><span class="chip">17 кадров</span>
+    <span class="chip">кадр = 5-10 сек</span><span class="chip">структура: одна суббота дважды</span><span class="chip">антагонист-«доброжелатель»</span><span class="chip">printable-план</span><span class="chip">питч: инструктор с экрана</span>
+  </div>
+  <p class="legend">› действие · ◦ камера/план/звук · 💬 реплика · эксперимент: одни и те же биты субботы повторяются 1:1 — сначала боль, после трансформации те же биты оплачиваются · v5: продукт продан голосом инструктора-ровесницы с экрана телефона (канон-строки swipe-bank поверх демонстрации)</p>
+  <p class="guardrail"><b>Производственный guardrail:</b> фоновые дети детской зоны — расфокус / со спины / за брызгами; в фокусе из детей ТОЛЬКО Mia.</p>
+
+  <h2>Действующие лица</h2>
+  <div class="cast">
+    <div class="role"><div class="nm c-helen">Helen</div><div class="rl">59 · бабушка. Дуга: зритель на бортике → в воде с внучкой. Серый кардиган «зрителя» → купальник.</div></div>
+    <div class="role"><div class="nm c-kate">Kate</div><div class="rl">34 · дочь. Любит мать, но привычно «освобождает» её от активного. Антагонист-«доброжелатель» — не злодейка.</div></div>
+    <div class="role"><div class="nm c-mia">Mia</div><div class="rl">7 · внучка. Хочет плавать «с бабушкой, а не рядом с бабушкой». Реплики только про совместное (guardrail).</div></div>
+    <div class="role"><div class="nm c-rita">Rita</div><div class="rl">60 · ровесница из бассейна, с внучкой-подружкой Mia. Финальный ask-бит.</div></div>
+    <div class="role"><div class="nm c-guard">Lifeguard</div><div class="rl">25 · спасатель. Свидетель провала → свидетель победы (зеркальная реплика).</div></div>
+    <div class="role"><div class="nm c-inst">Instructor</div><div class="rl">62 · женщина с экрана телефона: ровесница в лёгком флоу, говорит в камеру. Цифровой ментор — несёт канон-строки продукта.</div></div>
+  </div>
+
+  <h2>Шотлист</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Время</th><th>Локация</th><th>Раскадровка (действие · реплики по порядку)</th></tr></thead>
+    <tbody>
+      <tr class="trow"><td colspan="4">SATURDAY · прогон 1 — боль</td></tr>
+
+      <tr><td class="cfn">F1</td><td class="ctc">0:00–0:08</td><td class="cloc">Бассейн, детская зона</td>
+        <td><ul class="beats">
+          <li class="cam">Детонация с 1-го кадра: ВСПЛЕСК.</li>
+          <li>Mia бомбочкой влетает в воду — брызги в объектив <span class="cam">(звук-удар: всплеск + визг)</span>.</li>
+          <li class="cam">Кадр строится на Mia; другие дети — только расфокус-силуэты за брызгами, со спины.</li>
+          <li class="cam">Резкий rack-focus с бурлящей воды на <b>неподвижную</b> Helen: пластиковый стул, кардиган, чужие сумки на коленях. Вода кипит движением — Helen застыла.</li>
+          <li class="cam">опц. текст-оверлей (muted, крючок-вопрос): «Everyone's in the water — except her.»</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(из воды, звонко)</span>: "Grandma, look! Look at me!"</li>
+          <li>Helen машет в ответ — и поправляет чужие полотенца.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F2</td><td class="ctc">0:08–0:16</td><td class="cloc">Бассейн, бортик</td>
+        <td><ul class="beats">
+          <li>Kate выныривает к бортику, откидывает волосы. Кивает матери на сумки.</li>
+          <li class="dlg"><span class="spk c-kate">Kate</span> <span class="rem">(с любовью, привычно)</span>: "You're fine there, mom? Watch our stuff."</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(привычно-легко, заученно)</span>: "Go, go. I'm fine."</li>
+          <li>Улыбка на секунду запаздывает. Пальцы сжимают чужое полотенце. (эскалация · бит 1: «освободили» — не спросив, и она сама подыгрывает)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F3</td><td class="ctc">0:16–0:26</td><td class="cloc">Бассейн, лесенка</td>
+        <td><ul class="beats">
+          <li>Mia подплывает к бортику у лесенки, цепляется за край, тянет руку.</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(умоляюще)</span>: "Grandma, come in! Just the stairs part. Pleeease?"</li>
+          <li>Helen оглядывается: Kate далеко, ныряет с мужем. Никто не видит. <b>Она решается — ради внучки:</b> кладёт кардиган на перила, берётся за поручень.</li>
+          <li>Первая ступенька — <b>НОГА СОСКАЛЬЗЫВАЕТ</b> с мокрой ступени. Тело рушится вбок —</li>
+          <li class="cam"><b>РЕЗКИЙ ШЛЕПОК</b> ладони о поручень (звук-удар). Монтажный акцент: хлёст воды, костяшки белеют на металле.</li>
+          <li>Полбассейна обернулось. Lifeguard вскакивает со стула.</li>
+          <li class="dlg"><span class="spk c-guard">Lifeguard</span> <span class="rem">(с вышки, громко)</span>: "You okay, ma'am?"</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(не оборачиваясь, сдавленно)</span>: "Fine! Just… fine."</li>
+          <li>Выбирается назад, запахивает кардиган как броню. Mia у бортика медленно опускает руку. (эскалация · бит 2: провал на глазах у той, ради кого пыталась)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F4</td><td class="ctc">0:26–0:36</td><td class="cloc">Бассейн, детская зона</td>
+        <td><ul class="beats">
+          <li>Мяч перелетает бортик, катится к ногам Helen.</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(из воды, прыгая)</span>: "Grandma, throw it! Throw it to me!"</li>
+          <li>Helen <b>встаёт</b> со стула. Решается — хотя бы это. Поднимает мяч, замахивается —</li>
+          <li><b>Бросок не выходит:</b> плечо-колено подводят, мяч шлёпается о бортик, НЕ ДОЛЕТЕВ до воды. Катится боком.</li>
+          <li class="cam">Пауза. Mia ждёт в воде с поднятыми руками. Тишина на полсекунды — громче всплесков.</li>
+          <li class="dlg"><span class="spk c-kate">Kate</span> <span class="rem">(издали, машинально)</span>: "Careful, mom!"</li>
+          <li>Helen поднимает мяч ещё раз — и просто подаёт из рук, не бросая. Садится. Улыбка держится, пока Mia не отвернулась. (эскалация · бит 3: даже малая попытка провалилась)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F5</td><td class="ctc">0:36–0:44</td><td class="cloc">Машина, парковка</td>
+        <td><ul class="beats">
+          <li>Обратная дорога. Mia спит на заднем сиденье, мокрые волосы.</li>
+          <li class="cam">Крупно: Helen смотрит на спящую внучку в зеркало заднего вида.</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(сквозь сон, бормочет)</span>: "Next time swim with me, grandma…"</li>
+          <li>Helen отворачивается к окну. Глаза блестят. (ставка на отношениях — сказана ребёнком во сне)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F6</td><td class="ctc">0:44–0:54</td><td class="cloc">Кухня Helen, вечер</td>
+        <td><ul class="beats">
+          <li>Helen одна за пустым столом. Перед ней — рисунок Mia с холодильника: две фигурки в воде, «ME + GRANDMA».</li>
+          <li>Телефон вибрирует: семейный чат, Kate прислала видео из бассейна. Смех, брызги, Mia летит бомбочкой —</li>
+          <li>Helen ставит на паузу. Медленно проводит пальцем по кадру: вся семья в воде. <b>Её в кадре НЕТ. Даже на краю.</b></li>
+          <li class="cam"><b>Немой hold — ДНО:</b> стоп-кадр без неё — рядом рисунок, где она есть. Два изображения, одна пропасть. (только звук настенных часов)</li>
+          <li class="sil">без реплик — для семьи она уже «за кадром»</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F7</td><td class="ctc">0:54–1:04</td><td class="cloc">Кухня</td>
+        <td><ul class="beats">
+          <li>Helen начинает печатать ответ в чат: <b>«Wish I could—»</b>. Смотрит на слова. СТИРАЕТ.</li>
+          <li>Открывает поиск. Набирает медленно, как признание: «why do knees give out after 55».</li>
+          <li>Листает. Останавливается на видео: <b>женщина её лет</b> в лёгком непрерывном флоу — прямая спина, спокойное лицо. Жмёт play.</li>
+          <li class="dlg"><span class="spk c-inst">Instructor</span> <span class="rem">(с экрана, глядя в камеру, спокойно)</span>: "If your knees gave up after fifty-five — it's not your age. It's the wrong exercise."</li>
+          <li>Helen подносит телефон ближе. (крючок услышан — это про неё)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F8</td><td class="ctc">1:04–1:14</td><td class="cloc">Кухня</td>
+        <td><ul class="beats">
+          <li>Видео продолжается: Instructor говорит, <b>не прерывая мягкого флоу</b> (демонстрация + слова).</li>
+          <li class="dlg"><span class="spk c-inst">Instructor</span> <span class="rem">(с экрана)</span>: "The gym, the jogging — after fifty that can break you. It just feeds the inflammation." <span class="rem">(beat)</span> "Tai Chi walking heals your body while it works."</li>
+          <li class="dlg"><span class="spk c-inst">Instructor</span> <span class="rem">(с экрана, проще)</span>: "Nine minutes a day. Twenty-eight days. Your body is enough — no equipment. Free printable plan below."</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(себе, скептически)</span>: "Nine minutes. Sure."</li>
+          <li>Взгляд на рисунок. Обратно на экран. Жмёт «печать».</li>
+          <li class="cam">В тишине кухни оживает принтер — звук-событие. Выезжает лист: сетка 28 дней.</li>
+          <li>Лист — на холодильник, магнитом, <b>рядом с рисунком Mia</b>. Обводит DAY 1. (вход продукта в низшей точке; продан голосом ровесницы, решение — её)</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">Монтаж-трансформация · DAY 1 → DAY 14 → DAY 28</td></tr>
+
+      <tr><td class="cfn">F9</td><td class="ctc">1:14–1:22</td><td class="cloc">Кухня/гостиная · DAY 1</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 1</li>
+          <li>Утро. Helen повторяет перекат стопы по плану с листа, держась за подоконник. На холодильнике за спиной — лист + рисунок.</li>
+          <li>Вычёркивает день 1 на сетке. Смотрит на 27 пустых клеток. Выдыхает.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F10</td><td class="ctc">1:22–1:30</td><td class="cloc">Двор · DAY 14</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 14</li>
+          <li>Флоу ровнее, колено слушается. Пробует присесть к клумбе и встать — без рук. Получилось. Сама себе поднимает бровь.</li>
+          <li class="cam">Вставка: на сетке вычеркнуто 14 дней.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F11</td><td class="ctc">1:30–1:38</td><td class="cloc">Гостиная · DAY 28</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 28</li>
+          <li>Полный флоу — легко, дыхание ровное.</li>
+          <li class="cam">Крупно: рука вычёркивает день 28 — сетка полная.</li>
+          <li>Достаёт из шкафа купальник с биркой. Срывает бирку.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">SATURDAY · прогон 2 — те же биты, оплаченные</td></tr>
+
+      <tr><td class="cfn">F12</td><td class="ctc">1:38–1:48</td><td class="cloc">Бассейн, детская зона</td>
+        <td><ul class="beats">
+          <li><b>Зеркало F1:</b> Mia прыгает в воде, брызги. Камера уходит к пластиковому стулу —</li>
+          <li>— он <b>ПУСТ</b>. Только сумки.</li>
+          <li class="cam">Панорама к воде: Helen в бассейне, в купальнике, держит Mia за руки, кружит её по воде. Другие дети — расфокус за брызгами.</li>
+          <li><b>Зеркало F4:</b> Mia кидает мяч — Helen <b>ловит в воде</b> и бросает обратно, сильно и точно. Mia визжит от восторга.</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(захлёбываясь от счастья)</span>: "Grandma, again! Again!"</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F13</td><td class="ctc">1:48–1:56</td><td class="cloc">Бассейн, бортик</td>
+        <td><ul class="beats">
+          <li><b>Зеркало F2:</b> Kate выныривает к бортику — и застывает: мать в воде, уверенная, смеётся.</li>
+          <li class="dlg"><span class="spk c-kate">Kate</span> <span class="rem">(ошарашенно, с радостью)</span>: "Mom?.. Since when?"</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(кружа внучку, не оборачиваясь)</span>: "Since I stopped watching the bags."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F14</td><td class="ctc">1:56–2:04</td><td class="cloc">Бассейн, лесенка</td>
+        <td><ul class="beats">
+          <li><b>Зеркало F3:</b> та же лесенка. Helen выходит из воды — ровно, рука лишь скользит по поручню.</li>
+          <li>Тот же Lifeguard смотрит с вышки — теперь с улыбкой.</li>
+          <li class="dlg"><span class="spk c-guard">Lifeguard</span> <span class="rem">(кивая)</span>: "All good, ma'am?"</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(проходя мимо, легко)</span>: "Never better." <span class="rem">(зеркальная реплика: «Fine! Just… fine» оплачена)</span></li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F15</td><td class="ctc">2:04–2:12</td><td class="cloc">Машина, парковка</td>
+        <td><ul class="beats">
+          <li><b>Зеркало F5:</b> обратная дорога. Mia не спит — рисует на планшете: две фигурки в воде.</li>
+          <li class="dlg"><span class="spk c-mia">Mia</span> <span class="rem">(показывает планшет)</span>: "That's us today!"</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(в зеркало заднего вида, смеясь)</span>: "Frame that one, sweetie."</li>
+          <li class="cam">Крупно: улыбка настоящая. (payoff: рисунок был мечтой — стал «сегодня»)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F16</td><td class="ctc">2:12–2:20</td><td class="cloc">Раздевалка</td>
+        <td><ul class="beats">
+          <li>Rita (ровесница, с внучкой-подружкой Mia) догоняет Helen у шкафчиков.</li>
+          <li class="dlg"><span class="spk c-rita">Rita</span> <span class="rem">(понизив голос, честно)</span>: "I sit where you sat. Every Saturday." <span class="rem">(beat)</span> "What did you do?"</li>
+          <li class="dlg"><span class="spk c-helen">Helen</span> <span class="rem">(протягивает телефон)</span>: "Nine minutes a day. Free printable plan. Put your number in — I'll send it."</li>
+          <li>Rita вбивает номер. (ask-бит: варьированная форма)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F17</td><td class="ctc">2:20–2:30</td><td class="cloc">Бассейн, финал</td>
+        <td><ul class="beats">
+          <li>Широкий план: Helen и Mia прыгают в воду вместе, за руки. Брызги накрывают кадр.</li>
+          <li class="cam">Сквозь брызги — стоп-кадр в стиле детского рисунка: две фигурки, «ME + GRANDMA».</li>
+          <li class="titl">Overlay CTA · Tap the link, take the free quiz, start tomorrow.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+    </tbody>
+  </table></div>
+</div>
