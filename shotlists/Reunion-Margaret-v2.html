@@ -1,0 +1,198 @@
+<title>Shotlist: Reunion-Margaret v2</title>
+<style>
+  :root{ --bg:#FCFCFD; --card:#FFFFFF; --ink:#17171A; --dim:#4F4F56; --faint:#8A8A92;
+    --line:#E7E7EB; --accent:#4F46E5; --title-bg:#EEEDFB; --sil:#93939B; --row:#FAFAFB; --dlg-bg:#F5F4FB; --vo-bg:#FBF3E8; --vo:#9A5B1F; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:920px; margin:0 auto; padding:38px 20px 90px; }
+  .eyebrow{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1{ font-size:26px; line-height:1.15; margin:0 0 12px; }
+  .facts{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:8px; }
+  .chip{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--dim);
+    background:var(--card); border:1px solid var(--line); border-radius:7px; padding:3px 9px; }
+  .legend{ font-size:12.5px; color:var(--faint); margin:2px 0 0; }
+  h2{ font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim);
+    margin:36px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); font-weight:600; }
+  .cast{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; }
+  .role{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:11px 13px; }
+  .role .nm{ font-weight:600; font-size:15px; }
+  .role .rl{ font-size:12.5px; color:var(--dim); margin-top:3px; line-height:1.4; }
+  .c-margaret{ color:var(--accent); } .c-diane{ color:#0D9488; } .c-ray{ color:#B45309; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table{ border-collapse:collapse; width:100%; min-width:720px; font-size:14px; }
+  thead th{ position:sticky; top:0; background:var(--card); text-align:left; font-weight:600; font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--dim); padding:11px 12px; border-bottom:1.5px solid var(--line); }
+  td{ padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; }
+  tbody tr:nth-child(even) td{ background:var(--row); }
+  .cfn{ width:42px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600; color:var(--accent); white-space:nowrap; }
+  .ctc{ width:72px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--faint); white-space:nowrap; }
+  .cloc{ width:120px; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--dim); }
+  ul.beats{ margin:0; padding:0; list-style:none; }
+  ul.beats li{ position:relative; padding-left:17px; margin:0 0 6px; color:var(--dim); }
+  ul.beats li:last-child{ margin:0; }
+  ul.beats li::before{ content:"›"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; }
+  ul.beats li b{ color:var(--ink); font-weight:600; }
+  ul.beats li.cam{ color:var(--faint); font-size:12.5px; }
+  ul.beats li.cam::before{ content:"◦"; color:var(--faint); font-weight:400; }
+  ul.beats li.dlg{ background:var(--dlg-bg); border-radius:8px; padding:7px 10px 7px 26px; margin:5px 0; color:var(--ink); }
+  ul.beats li.dlg::before{ content:"💬"; left:8px; font-size:12px; top:8px; }
+  ul.beats li.vo{ background:var(--vo-bg); border-radius:8px; padding:7px 10px 7px 26px; margin:5px 0; color:var(--ink); }
+  ul.beats li.vo::before{ content:"🎙"; left:8px; font-size:12px; top:8px; }
+  li.dlg .spk, li.vo .spk{ font-weight:700; } li.dlg .rem, li.vo .rem{ font-style:italic; color:var(--faint); font-weight:400; font-size:13px; }
+  .c-vo{ color:var(--vo); }
+  ul.beats li.titl{ text-align:center; color:var(--accent); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.06em; background:var(--title-bg); border-radius:8px; padding:6px; margin:6px 0; }
+  ul.beats li.titl::before{ content:""; }
+  ul.beats li.sil{ color:var(--sil); font-style:italic; } ul.beats li.sil::before{ content:"—"; color:var(--sil); }
+  .trow td{ background:var(--title-bg)!important; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.08em; color:var(--accent); font-size:13px; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141416; --card:#1C1C1F; --ink:#ECECEE; --dim:#B4B4BC; --faint:#7A7A82;
+      --line:#2A2A2E; --accent:#A5A0FF; --title-bg:#211F33; --sil:#6E6E77; --row:#191919; --dlg-bg:#201F2A; --vo-bg:#2A2118; --vo:#F0B35E; }
+    .c-diane{ color:#5EEAD4; } .c-ray{ color:#FCD34D; }
+  }
+</style>
+<div class="wrap">
+  <p class="eyebrow">Microdrama shotlist · Tai Chi Femme · Skeleton B</p>
+  <h1>Reunion — Margaret Story · v2</h1>
+  <div class="facts">
+    <span class="chip">9:16</span><span class="chip">~2:05</span><span class="chip">15 кадров</span>
+    <span class="chip">кадр = 5-10 сек</span><span class="chip">флешфорвард-hook</span><span class="chip">VO-дневник</span><span class="chip">внутренний конфликт</span>
+  </div>
+  <p class="legend">› действие · ◦ камера/план/звук · 💬 реплика · 🎙 VO-дневник (голос Margaret поверх кадра) · эксперимент: без злодея и ментора — героиня против себя</p>
+
+  <h2>Действующие лица</h2>
+  <div class="cast">
+    <div class="role"><div class="nm c-margaret">Margaret</div><div class="rl">62 · протагонист. «Best Dancer '84» из школьного ежегодника. Дуга: отказ себе → тайная попытка → возвращение на танцпол.</div></div>
+    <div class="role"><div class="nm c-diane">Diane</div><div class="rl">61 · одноклассница-подруга. Голос ожиданий в акте 1, финальный ask-бит.</div></div>
+    <div class="role"><div class="nm c-ray">Ray</div><div class="rl">63 · одноклассник, звал её танцевать в '84. Тёплый триггер payoff-а.</div></div>
+  </div>
+
+  <h2>Шотлист</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Время</th><th>Локация</th><th>Раскадровка (действие · реплики по порядку)</th></tr></thead>
+    <tbody>
+      <tr><td class="cfn">F1</td><td class="ctc">0:00–0:07</td><td class="cloc">Танцпол <span style="text-transform:none">(флешфорвард)</span> → кухня</td>
+        <td><ul class="beats">
+          <li class="cam">Детонация с 1-го кадра: ПИК ТАНЦА.</li>
+          <li>Margaret в изумрудном платье кружится в свинге — юбка веером, каблук бьёт в пол, круг одноклассников хлопает в такт, телефоны снимают.</li>
+          <li class="cam">Камера в круге, низкий ракурс. На пике оборота — freeze-frame: её лицо, смеётся, волосы в движении.</li>
+          <li><b>SMASH-CUT</b> (музыка обрывается в тишину): та же женщина — халат, кухня, вцепилась в стол, задыхается после трёх шагов. Неузнаваемая. Встык.</li>
+          <li class="titl">TITLE · SIX WEEKS EARLIER</li>
+          <li class="sil">без реплик — контраст и есть хук</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F2</td><td class="ctc">0:07–0:15</td><td class="cloc">Кухня Margaret</td>
+        <td><ul class="beats">
+          <li>Margaret переводит дыхание у стола. Рядом — конверт «CLASS OF '84 · 40 YEARS» и раскрытый ежегодник: она только что пробовала тот самый шаг.</li>
+          <li class="cam">Макро: юная Margaret на фото в прыжке, подпись «BEST DANCER '84». Пальцы касаются фото.</li>
+          <li class="vo"><span class="spk c-vo">Margaret</span> <span class="rem">(VO-дневник, ровно)</span>: "Forty years. They remember the girl who danced all night."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F3</td><td class="ctc">0:15–0:23</td><td class="cloc">Кухня</td>
+        <td><ul class="beats">
+          <li>Margaret пробует шаг ещё раз — упрямо, вполсилы. На втором движении колено уводит, ловит равновесие о стул. (эскалация · бит 1)</li>
+          <li>Пробует медленнее, держась за спинку. Снова. Останавливается сама.</li>
+          <li>Закрывает ежегодник. Ладонь остаётся на обложке.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F4</td><td class="ctc">0:23–0:31</td><td class="cloc">Прихожая</td>
+        <td><ul class="beats">
+          <li>Телефон на тумбе, входящее голосовое. Margaret нажимает play, замирает с пальто в руках.</li>
+          <li class="dlg"><span class="spk c-diane">Diane</span> <span class="rem">(голосовое, из динамика, смеясь)</span>: "Ray keeps asking if you're coming. Best Dancer of '84 — no pressure!" <span class="rem">(смех в записи)</span></li>
+          <li>Палец Margaret зависает над «ответить». Убирает телефон в карман, не ответив. (эскалация · бит 2: ожидания стали публичными)</li>
+          <li class="cam">Крупный план: её лицо в зеркале прихожей — улыбки нет.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F5</td><td class="ctc">0:31–0:42</td><td class="cloc">Гостиная, вечер</td>
+        <td><ul class="beats">
+          <li>Margaret ставит пластинку — ту самую, из '84. Вдох. Пробует свинг в полную силу.</li>
+          <li><b>Колено подламывается на развороте</b> — хватается за комод, задевает тонарм: игла срывается с пластинки. <span class="rem">(звук-обрыв музыки — в тишину)</span></li>
+          <li><b>Немой hold:</b> стоит, вцепившись в комод. Медленно опускается на диван. Долго сидит в тишине. (эскалация · бит 3 → ДНО)</li>
+          <li>Придвигает приглашение. Ставит галочку: <b>«NOT ATTENDING»</b>.</li>
+          <li class="vo"><span class="spk c-vo">Margaret</span> <span class="rem">(VO, глухо)</span>: "I can't give them… this."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F6</td><td class="ctc">0:42–0:50</td><td class="cloc">Спальня, ночь</td>
+        <td><ul class="beats">
+          <li>Margaret листает телефон в темноте. В ленте — женщина её лет делает медленный флоу-шаг.</li>
+          <li>Останавливается. Смотрит. Хмыкает скептически, закрывает телефон. (Скелет B: сомнение обязательно)</li>
+          <li>Темнота. Пауза. Экран снова загорается — она вернулась к видео.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F7</td><td class="ctc">0:50–0:58</td><td class="cloc">Кухня, утро</td>
+        <td><ul class="beats">
+          <li>Margaret ставит телефон к сахарнице, открывает план. Сомневается секунду.</li>
+          <li class="dlg"><span class="spk c-margaret">Margaret</span> <span class="rem">(себе, с вызовом)</span>: "Nine minutes. Fine."</li>
+          <li>Отодвигает стул, освобождая место. (agency: сама решила, никто не вручал)</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">Монтаж-трансформация · WEEK 1 → WEEK 3 → WEEK 5</td></tr>
+
+      <tr><td class="cfn">F8</td><td class="ctc">0:58–1:06</td><td class="cloc">Кухня · WEEK 1</td>
+        <td><ul class="beats">
+          <li class="titl">WEEK 1</li>
+          <li>Первые перекаты — неуверенно, держится за спинку стула.</li>
+          <li class="vo"><span class="spk c-vo">Margaret</span> <span class="rem">(VO, сухо)</span>: "Day four. Still feel ridiculous."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F9</td><td class="ctc">1:06–1:14</td><td class="cloc">Задний двор · WEEK 3</td>
+        <td><ul class="beats">
+          <li class="titl">WEEK 3</li>
+          <li>Флоу ровный, дыхание в такт шагу. Стул больше не нужен.</li>
+          <li class="vo"><span class="spk c-vo">Margaret</span> <span class="rem">(VO, с удивлением)</span>: "Knees stopped arguing with me."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F10</td><td class="ctc">1:14–1:22</td><td class="cloc">Гостиная · WEEK 5</td>
+        <td><ul class="beats">
+          <li class="titl">WEEK 5</li>
+          <li>Играет та же пластинка — игла держится. Margaret — <b>тот самый свинг-шаг из F5</b>. Получается. Смеётся в голос.</li>
+          <li class="cam">Ежегодник на полке в фокусе за её спиной: фото и она — в одном кадре.</li>
+          <li class="sil">без реплик — только музыка и смех</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F11</td><td class="ctc">1:22–1:28</td><td class="cloc">Кухня</td>
+        <td><ul class="beats">
+          <li>Margaret достаёт приглашение, смотрит на «NOT ATTENDING».</li>
+          <li><b>Рвёт карточку пополам.</b> Пишет на новой: «SEE YOU THERE». (реверс решения = оплата внутреннего конфликта)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">REUNION NIGHT</td></tr>
+
+      <tr><td class="cfn">F12</td><td class="ctc">1:28–1:36</td><td class="cloc">Зал реюниона</td>
+        <td><ul class="beats">
+          <li>Двери распахиваются: Margaret входит в изумрудном платье. Разговоры стихают, головы поворачиваются.</li>
+          <li class="cam">Стедикам за спиной героини; зал в огнях, баннер «CLASS OF '84».</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F13</td><td class="ctc">1:36–1:46</td><td class="cloc">Танцпол</td>
+        <td><ul class="beats">
+          <li>Ray подходит, протягивает руку — как сорок лет назад.</li>
+          <li class="dlg"><span class="spk c-ray">Ray</span> <span class="rem">(улыбаясь)</span>: "Still the best dancer?"</li>
+          <li class="dlg"><span class="spk c-margaret">Margaret</span> <span class="rem">(берёт руку)</span>: "Find out."</li>
+          <li>Свинг — и наступает <b>пик из F1</b>: то же кружение, юбка веером, круг хлопает, телефоны снимают. Флешфорвард оплачен в реальном времени. (payoff ежегодника действием)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F14</td><td class="ctc">1:46–1:54</td><td class="cloc">Стол, позже</td>
+        <td><ul class="beats">
+          <li>Margaret обмахивается салфеткой, счастливая. Diane наклоняется через стол.</li>
+          <li class="dlg"><span class="spk c-diane">Diane</span> <span class="rem">(заговорщицки)</span>: "Okay. Spill it. What's your secret?"</li>
+          <li>Margaret молча кладёт телефон на стол экраном вверх — план открыт. Diane фотографирует экран. (ask-бит: варьированная форма)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F15</td><td class="ctc">1:54–2:05</td><td class="cloc">Танцпол, финал</td>
+        <td><ul class="beats">
+          <li>Margaret возвращается на танцпол — уже с двумя подругами, показывает им шаг.</li>
+          <li class="cam">Камера отъезжает: смех, огни, движение.</li>
+          <li class="vo"><span class="spk c-vo">Margaret</span> <span class="rem">(VO, последняя запись дневника)</span>: "Turns out she never left."</li>
+          <li class="titl">Overlay CTA · Tap the link, take the free quiz, start tomorrow.</li>
+        </ul></td></tr>
+    </tbody>
+  </table></div>
+</div>

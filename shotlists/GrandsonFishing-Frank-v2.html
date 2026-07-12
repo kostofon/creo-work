@@ -1,0 +1,185 @@
+<title>Shotlist: GrandsonFishing-Frank v2</title>
+<style>
+  :root{ --bg:#FCFCFD; --card:#FFFFFF; --ink:#17171A; --dim:#4F4F56; --faint:#8A8A92;
+    --line:#E7E7EB; --accent:#4F46E5; --title-bg:#EEEDFB; --sil:#93939B; --row:#FAFAFB; --dlg-bg:#F5F4FB; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:920px; margin:0 auto; padding:38px 20px 90px; }
+  .eyebrow{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1{ font-size:26px; line-height:1.15; margin:0 0 12px; }
+  .facts{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:8px; }
+  .chip{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--dim);
+    background:var(--card); border:1px solid var(--line); border-radius:7px; padding:3px 9px; }
+  .legend{ font-size:12.5px; color:var(--faint); margin:2px 0 0; }
+  h2{ font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim);
+    margin:36px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); font-weight:600; }
+  .cast{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; }
+  .role{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:11px 13px; }
+  .role .nm{ font-weight:600; font-size:15px; }
+  .role .rl{ font-size:12.5px; color:var(--dim); margin-top:3px; line-height:1.4; }
+  .c-frank{ color:var(--accent); } .c-tom{ color:#0D9488; } .c-leo{ color:#059669; } .c-neighbor{ color:#B45309; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table{ border-collapse:collapse; width:100%; min-width:720px; font-size:14px; }
+  thead th{ position:sticky; top:0; background:var(--card); text-align:left; font-weight:600; font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--dim); padding:11px 12px; border-bottom:1.5px solid var(--line); }
+  td{ padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; }
+  tbody tr:nth-child(even) td{ background:var(--row); }
+  .cfn{ width:42px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600; color:var(--accent); white-space:nowrap; }
+  .ctc{ width:72px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--faint); white-space:nowrap; }
+  .cloc{ width:120px; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--dim); }
+  ul.beats{ margin:0; padding:0; list-style:none; }
+  ul.beats li{ position:relative; padding-left:17px; margin:0 0 6px; color:var(--dim); }
+  ul.beats li:last-child{ margin:0; }
+  ul.beats li::before{ content:"›"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; }
+  ul.beats li b{ color:var(--ink); font-weight:600; }
+  ul.beats li.cam{ color:var(--faint); font-size:12.5px; }
+  ul.beats li.cam::before{ content:"◦"; color:var(--faint); font-weight:400; }
+  ul.beats li.dlg{ background:var(--dlg-bg); border-radius:8px; padding:7px 10px 7px 26px; margin:5px 0; color:var(--ink); }
+  ul.beats li.dlg::before{ content:"💬"; left:8px; font-size:12px; top:8px; }
+  li.dlg .spk{ font-weight:700; } li.dlg .rem{ font-style:italic; color:var(--faint); font-weight:400; font-size:13px; }
+  ul.beats li.titl{ text-align:center; color:var(--accent); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.06em; background:var(--title-bg); border-radius:8px; padding:6px; margin:6px 0; }
+  ul.beats li.titl::before{ content:""; }
+  ul.beats li.sil{ color:var(--sil); font-style:italic; } ul.beats li.sil::before{ content:"—"; color:var(--sil); }
+  .trow td{ background:var(--title-bg)!important; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.08em; color:var(--accent); font-size:13px; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141416; --card:#1C1C1F; --ink:#ECECEE; --dim:#B4B4BC; --faint:#7A7A82;
+      --line:#2A2A2E; --accent:#A5A0FF; --title-bg:#211F33; --sil:#6E6E77; --row:#191919; --dlg-bg:#201F2A; }
+    .c-tom{ color:#5EEAD4; } .c-leo{ color:#6EE7B7; } .c-neighbor{ color:#FCD34D; }
+  }
+</style>
+<div class="wrap">
+  <p class="eyebrow">Microdrama shotlist · Tai Chi Macho · Skeleton C</p>
+  <h1>GrandsonFishing — Frank Story · v2</h1>
+  <div class="facts">
+    <span class="chip">9:16</span><span class="chip">~1:55</span><span class="chip">13 кадров</span>
+    <span class="chip">кадр = 5-10 сек</span><span class="chip">тихая драма · ~5 реплик</span><span class="chip">без антагониста</span>
+  </div>
+  <p class="legend">› действие · ◦ камера/план/звук · 💬 реплика · эксперимент: muted до предела — вся драма телом · v2: бит «ужин на одного», дно с немым hold в темноте, Tom приходит ~44%</p>
+
+  <h2>Действующие лица</h2>
+  <div class="cast">
+    <div class="role"><div class="nm c-frank">Frank</div><div class="rl">63 · дед. Дуга: тихая сдача → упорство втайне → снова глава вылазок. Бывший «мотор» семейных поездок.</div></div>
+    <div class="role"><div class="nm c-tom">Tom</div><div class="rl">36 · сын. Заботливый — «подстраховывает» отца, не понимая, что этим ранит. Носитель продукта.</div></div>
+    <div class="role"><div class="nm c-leo">Leo</div><div class="rl">6 · внук. Обожает деда. Реплики только про совместное — не про тело, не про продукт.</div></div>
+    <div class="role"><div class="nm c-neighbor">Neighbor</div><div class="rl">65 · сосед-ровесник за забором. Финальный ask-бит.</div></div>
+  </div>
+
+  <h2>Шотлист</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Время</th><th>Локация</th><th>Раскадровка (действие · реплики по порядку)</th></tr></thead>
+    <tbody>
+      <tr><td class="cfn">F1</td><td class="ctc">0:00–0:08</td><td class="cloc">Причал, утро</td>
+        <td><ul class="beats">
+          <li>Leo тянет деда за руку к лодке — сияет.</li>
+          <li>Frank делает два шага, опирается на перила. Дышит тяжело.</li>
+          <li>Мягко высвобождает руку внука, машет: «идите без меня».</li>
+          <li class="cam">Крупный план: лицо Leo гаснет. Улыбка Frank держится, пока внук не отвернулся.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F2</td><td class="ctc">0:08–0:16</td><td class="cloc">Гараж</td>
+        <td><ul class="beats">
+          <li>Полка: удочки под слоем пыли. Frank проводит пальцем — след на пыли.</li>
+          <li>Заходит Tom, берёт снасти сам, не глядя.</li>
+          <li class="dlg"><span class="spk c-tom">Tom</span> <span class="rem">(тепло, не понимая что ранит)</span>: "We got it, pop. Rest up."</li>
+          <li>Frank открывает рот — и молча кивает. Рука сжимает пыльную удочку. (эскалация · бит 1)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F3</td><td class="ctc">0:16–0:24</td><td class="cloc">Двор / окно</td>
+        <td><ul class="beats">
+          <li>Семья грузит машину. Смех, хлопают двери.</li>
+          <li class="cam">Frank в окне, за стеклом. Leo машет ему с заднего сиденья.</li>
+          <li>Машина уезжает. Отражение Frank остаётся в стекле одно. (эскалация · бит 2)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F4</td><td class="ctc">0:24–0:32</td><td class="cloc">Кухня, день</td>
+        <td><ul class="beats">
+          <li>Frank ставит на стол <b>одну</b> тарелку. Ест стоя, у окна — стол на одного не накрывают.</li>
+          <li>По телевизору — передача про рыбалку. Смотрит секунду. Выключает.</li>
+          <li class="cam">Тишина после щелчка пульта — громче любых слов. (эскалация · бит 3: дом, где всегда было шумно)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F5</td><td class="ctc">0:32–0:42</td><td class="cloc">Кухня, вечер</td>
+        <td><ul class="beats">
+          <li>Frank листает телефон: прошлогоднее фото — он с Leo и удочкой, оба хохочут.</li>
+          <li class="cam">Макро: большой палец замирает над экраном.</li>
+          <li>Кладёт телефон экраном вниз.</li>
+          <li><b>Немой hold — ДНО:</b> сидит в темнеющей кухне, свет не включает. <span class="cam">Силуэт против окна; за окном зажигаются чужие окна.</span></li>
+          <li class="sil">без реплик — дно прожито</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F6</td><td class="ctc">0:42–0:52</td><td class="cloc">Крыльцо, вечер</td>
+        <td><ul class="beats">
+          <li>Tom вернулся. Садится рядом с отцом. Молчат вдвоём — по-мужски.</li>
+          <li>Tom кладёт свой телефон на колено отцу: экран с планом Tai Chi walking.</li>
+          <li class="dlg"><span class="spk c-tom">Tom</span> <span class="rem">(не глядя на отца, буднично)</span>: "Nine minutes a day. That's all it is."</li>
+          <li>Frank смотрит на экран. Не отвечает. Не отдаёт телефон. (решение остаётся за героем)</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">Монтаж-трансформация · DAY 1 → DAY 14 → DAY 28</td></tr>
+
+      <tr><td class="cfn">F7</td><td class="ctc">0:52–1:00</td><td class="cloc">Задний двор · DAY 1</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 1</li>
+          <li>Раннее утро. Frank неуклюже повторяет перекат стопы за телефоном.</li>
+          <li>Озирается — не видит ли кто. (гордость Macho: тренируется втайне)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F8</td><td class="ctc">1:00–1:08</td><td class="cloc">Задний двор · DAY 14</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 14</li>
+          <li>Движения ровные, дыхание спокойное. Уже не прячется.</li>
+          <li>Neighbor смотрит через забор с кружкой. Frank ловит взгляд — и продолжает. Сосед медленно кивает.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F9</td><td class="ctc">1:08–1:16</td><td class="cloc">Причал · DAY 28</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 28</li>
+          <li>Те же ступени к причалу, что в F1. Frank поднимается — руки свободны, не касаются перил.</li>
+          <li class="cam">Крупный план: спокойный выдох наверху. Смотрит на воду.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">СЛЕДУЮЩАЯ ПОЕЗДКА</td></tr>
+
+      <tr><td class="cfn">F10</td><td class="ctc">1:16–1:26</td><td class="cloc">Тропа к причалу</td>
+        <td><ul class="beats">
+          <li>Семья идёт с вещами. Leo едет на плечах у деда — визжит от счастья.</li>
+          <li>Tom несёт снасти следом, смотрит на отца. Опускает взгляд, улыбается себе.</li>
+          <li class="cam">Широкий план: Frank шагает ровно, легко. (оплата F1: тогда не дошёл до лодки — теперь несёт внука сам)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F11</td><td class="ctc">1:26–1:34</td><td class="cloc">Причал</td>
+        <td><ul class="beats">
+          <li>Frank достаёт из чехла удочку — ту самую, из гаража. Пыли нет: вычищена, блестит.</li>
+          <li class="dlg"><span class="spk c-leo">Leo</span> <span class="rem">(прыгает рядом)</span>: "Grandpa, teach me!"</li>
+          <li>Frank усаживает внука, ставит его руки на удочку поверх своих. (payoff-объект: удочка)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F12</td><td class="ctc">1:34–1:42</td><td class="cloc">Крыльцо, закат</td>
+        <td><ul class="beats">
+          <li>Frank и Tom снова сидят рядом — как в F6, но теперь Frank возвращает сыну телефон.</li>
+          <li class="dlg"><span class="spk c-frank">Frank</span> <span class="rem">(глядя на двор, скупо)</span>: "You were right. Nine minutes."</li>
+          <li>Tom сжимает плечо отца. Больше слов не нужно.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F13</td><td class="ctc">1:42–1:55</td><td class="cloc">Задний двор, утро</td>
+        <td><ul class="beats">
+          <li>Frank делает утренний флоу. Уверенно, в открытую.</li>
+          <li class="dlg"><span class="spk c-neighbor">Neighbor</span> <span class="rem">(через забор, с кружкой)</span>: "What is that you do every morning?"</li>
+          <li class="dlg"><span class="spk c-frank">Frank</span> <span class="rem">(не прерывая движения)</span>: "Tai Chi walking. Nine minutes."</li>
+          <li>Сосед достаёт телефон, что-то ищет. (ask-бит: сам гуглит название)</li>
+          <li class="titl">Overlay CTA · Tap the link, take the free quiz, start tomorrow.</li>
+        </ul></td></tr>
+    </tbody>
+  </table></div>
+</div>
