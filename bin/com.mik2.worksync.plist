@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mik2.worksync</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>/Users/mik2/creo-work/bin/worksync.sh</string>
+    </array>
+
+    <!-- раз в 30 минут (не так часто) + сразу при загрузке/пробуждении Mac -->
+    <key>StartInterval</key>
+    <integer>1800</integer>
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- не спамить: минимум 60с между запусками -->
+    <key>ThrottleInterval</key>
+    <integer>60</integer>
+
+    <!-- низкий приоритет: фон не мешает работе -->
+    <key>Nice</key>
+    <integer>10</integer>
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/mik2/creo-work/.worksync.launchd.log</string>
+    <key>StandardOutPath</key>
+    <string>/Users/mik2/creo-work/.worksync.launchd.log</string>
+</dict>
+</plist>
