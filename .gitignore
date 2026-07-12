@@ -1,3 +1,8 @@
 .DS_Store
 *.tmp
 .render-check.json
+
+# worksync служебное (не синхроним)
+.worksync.log
+.worksync.launchd.log
+.worksync.lock/
