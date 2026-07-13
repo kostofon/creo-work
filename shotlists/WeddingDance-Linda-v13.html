@@ -1,0 +1,296 @@
+<title>Shotlist: WeddingDance-Linda v13</title>
+<style>
+  :root{ --bg:#FCFCFD; --card:#FFFFFF; --ink:#17171A; --dim:#4F4F56; --faint:#8A8A92;
+    --line:#E7E7EB; --accent:#4F46E5; --title-bg:#EEEDFB; --villain:#B4231F; --sil:#93939B; --row:#FAFAFB; --dlg-bg:#F5F4FB;
+    --music-bg:#FBF3E8; --music:#9A5B1F; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:920px; margin:0 auto; padding:38px 20px 90px; }
+  .eyebrow{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 8px; }
+  h1{ font-size:26px; line-height:1.15; margin:0 0 12px; }
+  .facts{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:8px; }
+  .chip{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--dim);
+    background:var(--card); border:1px solid var(--line); border-radius:7px; padding:3px 9px; }
+  .chip.vil{ color:var(--villain); border-color:var(--villain); }
+  .legend{ font-size:12.5px; color:var(--faint); margin:2px 0 0; }
+  h2{ font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim);
+    margin:36px 0 14px; padding-bottom:7px; border-bottom:1px solid var(--line); font-weight:600; }
+  .cast{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; }
+  .role{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:11px 13px; }
+  .role .nm{ font-weight:600; font-size:15px; }
+  .role .rl{ font-size:12.5px; color:var(--dim); margin-top:3px; line-height:1.4; }
+  .c-linda{ color:var(--accent); } .c-chloe{ color:var(--villain); } .c-daniel{ color:#0D9488; }
+  .c-emma{ color:#059669; } .c-joo{ color:#B45309; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table{ border-collapse:collapse; width:100%; min-width:720px; font-size:14px; }
+  thead th{ position:sticky; top:0; background:var(--card); text-align:left; font-weight:600; font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--dim); padding:11px 12px; border-bottom:1.5px solid var(--line); }
+  td{ padding:13px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; }
+  tbody tr:nth-child(even) td{ background:var(--row); }
+  .cfn{ width:42px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:600; color:var(--accent); white-space:nowrap; }
+  .ctc{ width:72px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--faint); white-space:nowrap; }
+  .cloc{ width:120px; font-size:12px; text-transform:uppercase; letter-spacing:.03em; color:var(--dim); }
+  ul.beats{ margin:0; padding:0; list-style:none; }
+  ul.beats li{ position:relative; padding-left:17px; margin:0 0 6px; color:var(--dim); }
+  ul.beats li:last-child{ margin:0; }
+  ul.beats li::before{ content:"›"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; }
+  ul.beats li b{ color:var(--ink); font-weight:600; }
+  ul.beats li.cam{ color:var(--faint); font-size:12.5px; }
+  ul.beats li.cam::before{ content:"◦"; color:var(--faint); font-weight:400; }
+  ul.beats li.dlg{ background:var(--dlg-bg); border-radius:8px; padding:7px 10px 7px 26px; margin:5px 0; color:var(--ink); }
+  ul.beats li.dlg::before{ content:"💬"; left:8px; font-size:12px; top:8px; }
+  li.dlg .spk{ font-weight:700; } li.dlg .rem{ font-style:italic; color:var(--faint); font-weight:400; font-size:13px; }
+  ul.beats li.titl{ text-align:center; color:var(--accent); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.06em; background:var(--title-bg); border-radius:8px; padding:6px; margin:6px 0; }
+  ul.beats li.titl::before{ content:""; }
+  ul.beats li.sil{ color:var(--sil); font-style:italic; } ul.beats li.sil::before{ content:"—"; color:var(--sil); }
+  .trow td{ background:var(--title-bg)!important; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-weight:600; letter-spacing:.08em; color:var(--accent); font-size:13px; }
+  .mrow td{ background:var(--music-bg)!important; color:var(--music); font-size:13px; line-height:1.5; }
+  .mrow b{ color:var(--music); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.04em; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141416; --card:#1C1C1F; --ink:#ECECEE; --dim:#B4B4BC; --faint:#7A7A82;
+      --line:#2A2A2E; --accent:#A5A0FF; --title-bg:#211F33; --villain:#F0847F; --sil:#6E6E77; --row:#191919; --dlg-bg:#201F2A;
+      --music-bg:#2A2118; --music:#F0B35E; }
+    .c-daniel{ color:#5EEAD4; } .c-emma{ color:#6EE7B7; } .c-joo{ color:#FCD34D; }
+  }
+</style>
+<div class="wrap">
+  <p class="eyebrow">Microdrama shotlist · Tai Chi Femme · Skeleton A</p>
+  <h1>WeddingDance — Linda Story · v13</h1>
+  <div class="facts">
+    <span class="chip">9:16</span><span class="chip">~2:54</span><span class="chip">21 кадр</span>
+    <span class="chip">кадр = 5-10 сек</span><span class="chip vil">злодейка + оголённая эмоция</span><span class="chip">muted-first</span><span class="chip">связка 28↔30 дней</span><span class="chip">♫ музыка блоками</span>
+  </div>
+  <p class="legend">› действие · ◦ камера/план/звук · 💬 реплика · ♫ музыкальный блок · v13 (чистка): убран теоретический жаргон из битов (везде «реванш»), policy-запрещённое слово вырезано с экрана и реплик (Meta weight-policy), терминология выправлена — печатается guide</p>
+
+  <h2>Действующие лица</h2>
+  <div class="cast">
+    <div class="role"><div class="nm c-linda">Linda</div><div class="rl">65 · мать жениха. <b>Полная (plus-size — сюжетообразующее: платье не сходится)</b>, мягкое доброе лицо, седина в небрежном пучке. Код: до — серое бесформенное (кардиганы, балахоны), сутулость; после — осанка, яркий топ, красное платье. Дуга: стыд → ярость → достоинство.</div></div>
+    <div class="role"><div class="nm c-chloe">Chloe</div><div class="rl">55 · сватья. <b>Подтянутая, ухоженная «идеальная картинка»</b>: пастельный костюм, жемчуг, салонная укладка, ледяная улыбка — визуальный контраст с Linda. Сладкая, публично-жестокая, интригует за спиной.</div></div>
+    <div class="role"><div class="nm c-daniel">Daniel</div><div class="rl">32 · сын, жених. Высокий, открытое лицо, тёплая улыбка матери. Smart-casual. Эмоциональный якорь.</div></div>
+    <div class="role"><div class="nm c-emma">Emma</div><div class="rl">28 · невеста. Естественная, мягкая, без глянца. Тёплая, любит Linda.</div></div>
+    <div class="role"><div class="nm c-joo">Joo</div><div class="rl">72 · ментор-ровесница. Сухощавая, но обычная соседка, не «фитнес-бабушка»: практичная одежда, зонт, спокойные движения. Не гуру.</div></div>
+  </div>
+
+  <h2>Шотлист</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Время</th><th>Локация</th><th>Раскадровка (действие · реплики по порядку)</th></tr></thead>
+    <tbody>
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 1 · F1–F4 · «ХОЛОД»</b> — тихое разреженное пиано, напряжение; обрыв в тишину на треске шёлка (F1) и после реплики Chloe (F2)</td></tr>
+
+      <tr><td class="cfn">F1</td><td class="ctc">0:00–0:08</td><td class="cloc">Спальня Linda</td>
+        <td><ul class="beats">
+          <li class="cam">Детонация с 1-го кадра, полуплан СО СПИНЫ: Linda (65) у зеркала в красном платье — <b>КТО и ЧТО видно сразу</b>. Руки тянут молнию вверх.</li>
+          <li>Молния клинит на середине. Рывок —</li>
+          <li><b>РЕЗКИЙ ТРЕСК</b> рвущегося по шву шёлка <span class="cam">(звук-удар: ♫ обрыв в тишину)</span>. Руки замирают.</li>
+          <li class="cam">Крупно через зеркало: лицо Linda. Платье разошлось по боку, грудь тяжело вздымается.</li>
+          <li>На столике — свадебное приглашение «Daniel &amp; Emma»; на него падает слеза. (контекст встык, за секунду)</li>
+          <li class="cam"><b>ФЛЕШ-ВРЕЗКА</b> (0.5–1 сек, воспоминание с примерки): лицо Chloe крупно — сладкая улыбка, жемчуг. Атрибуция: реплика — ЕЁ, не мысль Linda; в сабах имя спикера.</li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(врезка, сладко-снисходительно — в повисшей тишине)</span>: "Wear something <i>forgiving</i>, dear. Think of the photos."</li>
+          <li>Встык обратно: лицо Linda в зеркале. Реплика осела.</li>
+          <li class="cam">опц. текст-оверлей (muted, крючок-вопрос): «The dress fit last year.»</li>
+          <li class="titl">TITLE · 30 DAYS UNTIL THE WEDDING</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F2</td><td class="ctc">0:08–0:16</td><td class="cloc">Ужин семей</td>
+        <td><ul class="beats">
+          <li>Гости за столом. Chloe встаёт с бокалом, сладкая улыбка. <span class="cam">(содержимое бокалов не читается)</span></li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(громко, при всех)</span>: "We're shortening the mother-son dance. Just a hug." <span class="rem">(beat, улыбка)</span> "You'll photograph better sitting, dear."</li>
+          <li>Linda цепенеет, вилка застыла в руке.</li>
+          <li class="dlg"><span class="spk c-daniel">Daniel</span> <span class="rem">(нахмурившись)</span>: "Mom loves that dance—"</li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(сладко, финально, не глядя)</span>: "It's decided, sweetheart. Photos come first."</li>
+          <li>Гости неловко замолкают. <b>Публичное унижение; сын заступился — его отрезали.</b></li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F3</td><td class="ctc">0:16–0:24</td><td class="cloc">Коридор у кухни</td>
+        <td><ul class="beats">
+          <li>Linda возвращается за забытым шарфом. Замирает у приоткрытой двери.</li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(за дверью, подруге, ядовито)</span>: "His mother. In red." <span class="rem">(смешок)</span> "God. I'll seat her behind a pillar."</li>
+          <li class="cam">Крупный план: лицо Linda.</li>
+          <li>Стыд сменяется <b>яростью</b>. Подслушанный сговор.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F4</td><td class="ctc">0:24–0:32</td><td class="cloc">Прихожая</td>
+        <td><ul class="beats">
+          <li>Daniel обнимает мать за плечи — тёплый, про сговор не знает.</li>
+          <li class="dlg"><span class="spk c-daniel">Daniel</span>: "Full song, mom. Like when I was seven."</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(глотает слёзы)</span>: "Wouldn't miss it, honey."</li>
+          <li>За закрытой дверью её улыбка гаснет. <b>Ставка на отношениях.</b></li>
+        </ul></td></tr>
+
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 2 · F5–F8 · «ПОПЫТКА»</b> — нарастающий драматичный пульс (струнные + перкуссия), темп растёт с каждым провалом; ОБРЫВ на падении в лужу (F8)</td></tr>
+
+      <tr><td class="cfn">F5</td><td class="ctc">0:32–0:40</td><td class="cloc">Спальня, ночь</td>
+        <td><ul class="beats">
+          <li>Linda не спит. Красное платье висит на дверце шкафа — молния так и разошлась.</li>
+          <li>Встаёт. Достаёт с антресолей пыльную коробку: <b>старые кроссовки из 90-х</b>. Сдувает пыль.</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(себе, сквозь зубы)</span>: "Thirty days. Fine." <span class="rem">(beat)</span> "The old way."</li>
+          <li>Ставит кроссовки у двери, как ультиматум себе. <b>Решение героини; «старый способ» = завязка на провал.</b></li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F6</td><td class="ctc">0:40–0:48</td><td class="cloc">Спортзал</td>
+        <td><ul class="beats">
+          <li><b>Провал 1.</b> Linda тянет штангу, багровое лицо, дрожь.</li>
+          <li>Бросает штангу, хватается за поясницу. <span class="cam">(звук: лязг железа)</span></li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(VO, горько)</span>: "I swore I'd sweat it off."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F7</td><td class="ctc">0:48–0:56</td><td class="cloc">Гостиная Linda</td>
+        <td><ul class="beats">
+          <li><b>Провал 2.</b> Домашняя тренировка: на экране — молодая тренерша в темпе, jumping jacks.</li>
+          <li>Linda пытается повторить — сбивается на втором прыжке, колено простреливает, хватается за стол. Одышка.</li>
+          <li class="cam">Контраст в одном кадре: экран скачет в ритме — Linda согнулась пополам.</li>
+          <li>Падает на диван, накрывает лицо полотенцем. Экран продолжает считать: "...five more! Come on!"</li>
+          <li class="sil">без реплик героини — не для неё этот темп (wrong exercise — setup для Joo)</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F8</td><td class="ctc">0:56–1:04</td><td class="cloc">Парк, ливень</td>
+        <td><ul class="beats">
+          <li><b>Провал 3.</b> Linda тяжело бежит под дождём, одышка. Последняя попытка — в ливень: до свадьбы всё меньше.</li>
+          <li class="cam">На дальнем плане, не в фокусе — Joo под зонтом делает тай-чи.</li>
+          <li>Спотыкается — <b>падает в лужу</b>. Всплеск. <span class="cam">(♫ музыка ОБРЫВАЕТСЯ ударом)</span></li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(себе, задыхаясь)</span>: "Just… keep going."</li>
+        </ul></td></tr>
+
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 3 · F9 · «ДНО»</b> — музыки НЕТ. Только стена дождя, низкий гул города, одинокие шаги прохожих</td></tr>
+
+      <tr><td class="cfn">F9</td><td class="ctc">1:04–1:12</td><td class="cloc">Парк, лужа</td>
+        <td><ul class="beats">
+          <li><b>Немой hold — ДНО.</b> Ливень стеной. Linda сидит в луже — не пытается встать.</li>
+          <li class="cam">Мир против неё: серые силуэты прохожих под зонтами обходят, не глядя. Волосы прилипли к лицу.</li>
+          <li class="cam">Макро: грязные ладони; дождь смывает грязь ручьями. Слёзы неотличимы от дождя.</li>
+          <li>Смотрит в никуда. Все три способа кончились. Свадьба — через три недели. <b>Всё пропало.</b></li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 4 · F10–F12 · «МЕНТОР»</b> — тёплая минималистичная тема (мягкое пиано); входит ТОЛЬКО когда свет фонаря выхватывает лицо Joo — не раньше</td></tr>
+
+      <tr><td class="cfn">F10</td><td class="ctc">1:12–1:20</td><td class="cloc">Парк</td>
+        <td><ul class="beats">
+          <li><b>Появление Joo.</b> На Linda падает ТЕНЬ — дождь над ней вдруг прекращается. Зонт.</li>
+          <li class="cam">Linda медленно поднимает голову: против контрового света фонаря — тёмный <b>СИЛУЭТ</b> с зонтом. Пауза-загадка: кто это?</li>
+          <li>Силуэт наклоняется — свет фонаря выхватывает лицо: <b>Joo</b>. Спокойная, без жалости. <span class="cam">(♫ вход темы ментора)</span></li>
+          <li>Подаёт руку, легко поднимает Linda.</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span> <span class="rem">(спокойно)</span>: "I watch you run past. Every morning." <span class="rem">(beat)</span> "You're punishing your body — and it punishes back."</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(сорванно, сквозь дождь)</span>: "The wedding's in a month. I'm out of ways."</li>
+          <li>Ставка и отчаяние сказаны вслух — вход для ментора.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F11</td><td class="ctc">1:20–1:28</td><td class="cloc">Под навесом</td>
+        <td><ul class="beats">
+          <li>Joo делает один мягкий, контролируемый перекат стопы.</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span>: "No iron. No pounding. After fifty, that just feeds the inflammation."</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(горько)</span>: "I've tried everything. You saw me out there."</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span> <span class="rem">(спокойно)</span>: "Not more, Linda. Different." <span class="rem">(beat, кивая на лужу за навесом)</span> "Two years ago, that was me. Same rain. Same puddle."</li>
+          <li>Linda поднимает глаза — впервые слушает по-настоящему. <b>Возражение поднято и закрыто; доказательство прожито.</b></li>
+          <li class="dlg"><span class="spk c-joo">Joo</span>: "This heals while it works. Nine minutes a day."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F12</td><td class="ctc">1:28–1:36</td><td class="cloc">Под навесом</td>
+        <td><ul class="beats">
+          <li>Joo достаёт из сумки сложенный вчетверо <b>ЛИСТ</b> — свой, потёртый на сгибах. Разворачивает: сетка 28 дней, вычеркнута до конца.</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span>: "Tai Chi Walking. A printable guide — twenty-eight days, right in your living room." <span class="rem">(beat)</span> "Your body is enough."</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(берёт лист, недоверчиво)</span>: "Nine minutes a day? That's it?"</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span> <span class="rem">(сухо, с теплом)</span>: "You scroll longer, dear." <span class="rem">(в глаза, твёрдо)</span> "The plan takes twenty-eight days. You have thirty."</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span> <span class="rem">(сжимая её руку с листом — мотивация к ставке)</span>: "Thirty years you carried that family. Nobody takes that dance from you."</li>
+          <li>Linda сжимает лист. Кивок — решение. Тень улыбки. <b>Math-связка 28↔30 от ментора; мотивация привязана к танцу.</b></li>
+        </ul></td></tr>
+
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 5 · F13–F17 · «ТРАНСФОРМАЦИЯ»</b> — светлый растущий трек в ритме дыхания; входит с оживающего принтера (F13); каждый DAY-титр — подъём на ступень; на молнии (F17) — тёплая пауза-выдох</td></tr>
+
+      <tr><td class="cfn">F13</td><td class="ctc">1:36–1:44</td><td class="cloc">Кухня, вечер</td>
+        <td><ul class="beats">
+          <li><b>Печать.</b> Linda дома, мокрые волосы, полотенце на плечах. На столе — потёртый лист Joo.</li>
+          <li>Открывает ноутбук, находит гайд. Жмёт «печать».</li>
+          <li class="cam">Принтер оживает в тихом доме — звук-событие (♫ вход трека). Выезжает свежий лист: <b>«TAI CHI WALKING · 28-DAY GUIDE»</b>, чистая сетка дней.</li>
+          <li>Вешает на холодильник — рядом со свадебным приглашением. Обводит DAY 1 красным маркером. (цель и план на одной дверце)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="trow"><td colspan="4">Монтаж-трансформация · DAY 1 → DAY 14 → DAY 28</td></tr>
+
+      <tr><td class="cfn">F14</td><td class="ctc">1:44–1:52</td><td class="cloc">Лужайка · DAY 1</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 1</li>
+          <li>Утро. Linda в сером повторяет движения <b>по бумажному листу</b>, прислонённому к перилам крыльца, — сбивается, начинает заново. <b>Упорство, не грация; тренировка с бумажки, не с телефона.</b></li>
+          <li class="cam">У крыльца — старые кроссовки, уже не нужны. (тихая оплата F5: «старый способ» отставлен)</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F15</td><td class="ctc">1:52–2:00</td><td class="cloc">Парк · DAY 14</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 14</li>
+          <li>Движения ровнее, дыхание спокойнее, осанка выпрямляется. Ровесница на дорожке замедляет шаг — уважение.</li>
+          <li class="dlg"><span class="spk c-joo">Joo</span> <span class="rem">(негромко)</span>: "There it is. Let it flow."</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F16</td><td class="ctc">2:00–2:08</td><td class="cloc">Двор, закат · DAY 28</td>
+        <td><ul class="beats">
+          <li class="titl">DAY 28</li>
+          <li>Свободный флоу в <b>ярком топе</b> (код одежды: серое → цвет). Прямая спина, непрерывное движение.</li>
+          <li class="cam">Камера медленно обходит вокруг. Linda сияет.</li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F17</td><td class="ctc">2:08–2:14</td><td class="cloc">Спальня</td>
+        <td><ul class="beats">
+          <li>Красное платье: молния идёт вверх <b>одним лёгким движением</b>.</li>
+          <li class="cam">Крупный план: тихий выдох, улыбка.</li>
+          <li><b>Оплата хука F1.</b></li>
+          <li class="sil">без реплик</li>
+        </ul></td></tr>
+
+      <tr class="mrow"><td colspan="4">♫ <b>БЛОК 6 · F18–F21 · «СВАДЬБА»</b> — диегетический лайв-бэнд зала; на mother-son dance главная тема в полную силу; финал на террасе — лёгкий, воздушный</td></tr>
+
+      <tr class="trow"><td colspan="4">WEDDING DAY</td></tr>
+
+      <tr><td class="cfn">F18</td><td class="ctc">2:14–2:22</td><td class="cloc">Свадебный зал, вход</td>
+        <td><ul class="beats">
+          <li>Linda входит в красном. Гости оборачиваются.</li>
+          <li class="dlg"><span class="spk c-emma">Guest</span> <span class="rem">(шёпотом соседке)</span>: "Is that Linda?" <span class="rem">—</span> <span class="spk c-emma">Guest 2</span> <span class="rem">(шёпотом)</span>: "She looks incredible."</li>
+          <li><b>Chloe цепенеет</b> с бокалом у колонны. <span class="cam">(содержимое бокала не читается)</span></li>
+          <li>Daniel идёт навстречу, сияет.</li>
+          <li class="dlg"><span class="spk c-daniel">Daniel</span>: "Mom… <i>wow.</i>"</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F19</td><td class="ctc">2:22–2:32</td><td class="cloc">Танцпол</td>
+        <td><ul class="beats">
+          <li><b>Реванш 1 — её голос тонет.</b> Полный mother-son dance. Linda ведёт лёгкий поворот, дыхание ровное. <span class="cam">(♫ главная тема в полную силу)</span></li>
+          <li>Chloe привстаёт, тянется вмешаться:</li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(натянуто, в сторону)</span>: "The photographer's actually ready wh—"</li>
+          <li>Зал ВСТАЁТ, овация накрывает её слова. Chloe медленно опускается на стул, её никто не слышит. (пыталась контролировать — публично утонула)</li>
+          <li class="dlg"><span class="spk c-daniel">Daniel</span> <span class="rem">(в микрофон, голос дрожит)</span>: "The strongest woman I know. My mom."</li>
+          <li>Emma плачет от радости, снимает на телефон.</li>
+          <li class="cam">Cut на Chloe — одна у той самой колонны, аплодирует через силу. <b>Визуальный реванш: «за колонну» вернулось ей же.</b></li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F20</td><td class="ctc">2:32–2:40</td><td class="cloc">Зал, фото</td>
+        <td><ul class="beats">
+          <li><b>Очный реванш 2.</b> Фотограф собирает семейное фото. Daniel тянет мать в <b>ЦЕНТР</b> — между собой и Emma.</li>
+          <li>Chloe скользит к центру — но гости естественно <b>СМЫКАЮТСЯ</b> вокруг Linda, и Chloe оттёрта к самому краю.</li>
+          <li class="dlg"><span class="spk c-daniel">Фотограф</span> <span class="rem">(Chloe, буднично)</span>: "Ma'am, could you step in? You're out of frame."</li>
+          <li>Chloe втискивается с края, улыбка натянута.</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(Chloe, сладко — её же интонацией из F2)</span>: "Photos come first, dear."</li>
+          <li>Chloe открывает рот — ответить нечем. <b>ЩЕЛЧОК</b> затвора, вспышка. <b>Очный реванш: та, кто хотела «фото без свекрови», сама еле влезла в кадр.</b></li>
+          <li class="cam">Стоп-кадр фотографии: Linda в центре семьи, сияет; Chloe с краю.</li>
+        </ul></td></tr>
+
+      <tr><td class="cfn">F21</td><td class="ctc">2:40–2:54</td><td class="cloc">Терраса</td>
+        <td><ul class="beats">
+          <li>Гостьи-ровесницы облепили Linda, трогают платье, тянут телефоны.</li>
+          <li class="dlg"><span class="spk c-emma">Guest 1</span> <span class="rem">(трогает ткань)</span>: "That dress! I could never—"</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(с улыбкой)</span>: "They told me to wear something forgiving." <span class="rem">(beat)</span> "I didn't." <span class="rem">(возврат строки Chloe из F1)</span></li>
+          <li>Гостьи смеются. В стороне — Chloe, одна. Смотрит на этот круг. Что-то в ней ломается.</li>
+          <li><b>Капитуляция.</b> Chloe подходит. Сглатывает гордость.</li>
+          <li class="dlg"><span class="spk c-chloe">Chloe</span> <span class="rem">(тихо, впервые без сахара)</span>: "…Linda. How did you—"</li>
+          <li>Пауза. Все смотрят. Linda могла бы добить — но выбирает высокую дорогу.</li>
+          <li class="dlg"><span class="spk c-linda">Linda</span> <span class="rem">(тепло, великодушно, с последней мягкой шпилькой)</span>: "Nine minutes a day, Chloe. The guide's yours." <span class="rem">(beat)</span> "I'll send it to everyone." <span class="rem">(смотрит ей в глаза)</span> "Even you."</li>
+          <li>Chloe застывает: принять помощь от той, кого гнобила. Гостьи уже хватают телефоны — уведомления. <b>Нос утёрт изящно: антагонист сам просит, герой возвышается; ask-бит через капитуляцию злодея.</b></li>
+          <li class="dlg" style="background:var(--title-bg)">Overlay CTA <span class="rem">(текст на экране, не реплика)</span>: Tap the link, take the quiz, start tomorrow.</li>
+        </ul></td></tr>
+    </tbody>
+  </table></div>
+</div>
