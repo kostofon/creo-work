@@ -1,0 +1,472 @@
+<title>Four Microdramas — Tai Chi 50+</title>
+<style>
+  :root {
+    --ground: #0B0B0F;
+    --surface: #15151B;
+    --surface-2: #1C1C24;
+    --ink: #F5F3EF;
+    --muted: #8A8A97;
+    --faint: #5B5B67;
+    --hairline: rgba(255,255,255,.09);
+    --hairline-2: rgba(255,255,255,.05);
+    --grey-arc: #4A4A54;
+    --accent: #E23A45;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --measure: 66ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  body, .wrap { background: var(--ground); }
+
+  .wrap {
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(28px, 6vw, 72px) clamp(18px, 5vw, 56px) 96px;
+  }
+
+  h1, h2, h3 { margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .num { font-variant-numeric: tabular-nums; }
+  .mono { font-family: var(--mono); }
+
+  /* ---------- HERO ---------- */
+  .hero { border-bottom: 1px solid var(--hairline); padding-bottom: clamp(28px, 5vw, 52px); }
+  .hero .eyebrow { display: block; margin-bottom: 22px; }
+  .hero h1 {
+    font-size: clamp(40px, 9vw, 96px);
+    font-weight: 860;
+    line-height: .96;
+    letter-spacing: -.03em;
+  }
+  .hero h1 .thin { display: block; font-weight: 300; color: var(--muted); letter-spacing: -.02em; }
+  .hero-sub {
+    margin-top: 26px;
+    max-width: 54ch;
+    color: var(--muted);
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+  }
+  .hero-meta {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .04em;
+    color: var(--muted);
+  }
+  .hero-meta span {
+    border: 1px solid var(--hairline);
+    padding: 5px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .hero-meta span b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- COMPARISON MATRIX ---------- */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: clamp(48px, 8vw, 80px) 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-label::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+
+  .matrix-scroll { overflow-x: auto; border: 1px solid var(--hairline); border-radius: 4px; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  th, td {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    border-bottom: 1px solid var(--hairline-2);
+    vertical-align: top;
+  }
+  thead th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    background: var(--surface);
+    position: sticky; top: 0;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody tr td:first-child { border-left: 3px solid var(--row-accent, transparent); }
+  .cell-title { font-family: var(--mono); font-weight: 600; color: var(--ink); }
+  .cell-sub { color: var(--faint); font-family: var(--mono); font-size: 11px; letter-spacing: .03em; }
+  td .num { color: var(--ink); }
+  .tag-none { color: var(--faint); font-style: italic; }
+
+  /* ---------- STORY CARDS ---------- */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 26px 26px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .card-head { display: flex; flex-direction: column; gap: 10px; }
+  .card-index {
+    display: flex; align-items: baseline; gap: 12px;
+    font-family: var(--mono);
+  }
+  .card-index .idx { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .05em; }
+  .card-index .fmt {
+    margin-left: auto; font-size: 11px; color: var(--muted);
+    letter-spacing: .05em; text-transform: uppercase;
+  }
+  .card-title { font-size: 26px; font-weight: 820; letter-spacing: -.02em; line-height: 1.05; }
+  .card-who {
+    font-family: var(--mono); font-size: 12.5px; color: var(--muted);
+    letter-spacing: .02em;
+  }
+  .card-who b { color: var(--ink); font-weight: 600; }
+
+  .meta-row {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .03em;
+  }
+  .meta-row span {
+    border: 1px solid var(--hairline); padding: 4px 8px; border-radius: 2px;
+    color: var(--muted);
+  }
+  .meta-row span.accent-chip { border-color: color-mix(in srgb, var(--accent) 45%, transparent); color: var(--ink); }
+
+  .logline { font-size: 15px; line-height: 1.55; color: #D8D6D0; max-width: var(--measure); }
+
+  /* arc chip */
+  .arc { display: flex; flex-direction: column; gap: 7px; }
+  .arc-track {
+    height: 8px; border-radius: 6px;
+    background: linear-gradient(90deg, var(--grey-arc) 0%, var(--grey-arc) 22%, var(--accent) 100%);
+  }
+  .arc-labels {
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .arc-labels .from { color: var(--faint); }
+  .arc-labels .to { color: var(--accent); }
+
+  /* beats timeline */
+  .beats { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--hairline-2); }
+  .beat {
+    display: grid; grid-template-columns: 52px 92px 1fr; gap: 12px;
+    padding: 9px 0; align-items: baseline;
+    border-bottom: 1px solid var(--hairline-2);
+    font-size: 13px;
+  }
+  .beat:last-child { border-bottom: 0; }
+  .beat .bt { font-family: var(--mono); font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .beat .bk {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--accent); align-self: center;
+  }
+  .beat .bd { color: #C9C7C2; line-height: 1.4; }
+
+  .quote {
+    margin-top: 2px; padding: 14px 16px;
+    background: var(--surface-2); border-radius: 3px;
+    border-left: 2px solid var(--accent);
+  }
+  .quote p { font-size: 14.5px; font-style: italic; color: var(--ink); line-height: 1.45; }
+  .quote cite {
+    display: block; margin-top: 7px; font-style: normal;
+    font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .04em;
+  }
+
+  /* ---------- SHARED CTA ---------- */
+  .footer {
+    margin-top: clamp(48px, 8vw, 80px);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: clamp(24px, 5vw, 40px);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 20px 40px;
+    background: linear-gradient(180deg, var(--surface) 0%, var(--ground) 100%);
+  }
+  .footer .fl { flex: 1 1 300px; }
+  .footer .eyebrow { display: block; margin-bottom: 12px; }
+  .footer h3 { font-size: clamp(20px, 3vw, 28px); font-weight: 780; letter-spacing: -.01em; }
+  .footer .fr {
+    font-family: var(--mono); font-size: 13px; color: var(--ink);
+    background: var(--surface-2); border: 1px solid var(--hairline);
+    padding: 12px 16px; border-radius: 3px; letter-spacing: .02em;
+  }
+  .footer .fr::before { content: "› "; color: var(--muted); }
+
+  .colophon {
+    margin-top: 28px; font-family: var(--mono); font-size: 11px;
+    color: var(--faint); letter-spacing: .04em; line-height: 1.7;
+  }
+  .colophon b { color: var(--muted); font-weight: 500; }
+
+  a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .card { transition: border-color .25s ease, transform .25s ease; }
+    .card:hover { transform: translateY(-2px); border-top-color: color-mix(in srgb, var(--accent) 75%, white); }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Simple.Life · CreoProd · Tai Chi 50+ · Narrative funnel</span>
+    <h1>Four microdramas<span class="thin">one method, four skeletons</span></h1>
+    <p class="hero-sub">Каждая история ведёт зрителя 50+ через одну дугу — от отказа себе к возвращению тела — и тестирует свою структурную гипотезу: тип хука, наличие антагониста, момент входа продукта.</p>
+    <div class="hero-meta">
+      <span><b>9:16</b> vertical</span>
+      <span><b>1:55–2:35</b> runtime</span>
+      <span><b>13–18</b> shots each</span>
+      <span>кадр <b>5–10s</b></span>
+      <span>Femme <b>×3</b> · Macho <b>×1</b></span>
+      <span>shared CTA <b>free quiz</b></span>
+    </div>
+  </header>
+
+  <div class="section-label">Structural matrix — что каждый сценарий проверяет</div>
+  <div class="matrix-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Story</th>
+          <th>Runtime · shots</th>
+          <th>Skeleton</th>
+          <th>Hook type</th>
+          <th>Antagonist</th>
+          <th>Product entry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="--row-accent:#E23A45;">
+          <td><span class="cell-title">WeddingDance</span><br><span class="cell-sub">Linda · Femme · v8</span></td>
+          <td><span class="num">2:34</span> · <span class="num">18</span></td>
+          <td>A — mentor lift</td>
+          <td>Cold-open — рвётся платье</td>
+          <td>Chloe — сватья</td>
+          <td>Ментор (Joo)</td>
+        </tr>
+        <tr style="--row-accent:#3FA9C9;">
+          <td><span class="cell-title">SaturdaySwim</span><br><span class="cell-sub">Helen · Femme · v5</span></td>
+          <td><span class="num">2:30</span> · <span class="num">17</span></td>
+          <td>X — зеркальные биты</td>
+          <td>Cold-open — всплеск</td>
+          <td>Kate — дочь <span class="cell-sub">(доброжелатель)</span></td>
+          <td>Сама — agency</td>
+        </tr>
+        <tr style="--row-accent:#2FA87A;">
+          <td><span class="cell-title">Reunion</span><br><span class="cell-sub">Margaret · Femme · v2</span></td>
+          <td><span class="num">2:05</span> · <span class="num">15</span></td>
+          <td>B — самооткрытие</td>
+          <td>Флешфорвард + smash-cut</td>
+          <td class="tag-none">нет — внутренний</td>
+          <td>Сама — agency</td>
+        </tr>
+        <tr style="--row-accent:#C98A3C;">
+          <td><span class="cell-title">GrandsonFishing</span><br><span class="cell-sub">Frank · Macho · v2</span></td>
+          <td><span class="num">1:55</span> · <span class="num">13</span></td>
+          <td>C — семейная интервенция</td>
+          <td>Cold-open — не дошёл до лодки</td>
+          <td class="tag-none">нет</td>
+          <td>Сын (Tom)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-label">The stories</div>
+  <div class="cards">
+
+    <!-- 1 · WEDDINGDANCE -->
+    <article class="card" style="--accent:#E23A45;">
+      <div class="card-head">
+        <div class="card-index">
+          <span class="idx">STORY 01</span>
+          <span class="fmt">Tai Chi Femme · Skeleton A</span>
+        </div>
+        <h2 class="card-title mono">WeddingDance</h2>
+        <p class="card-who"><b>Linda, 65</b> — мать жениха · антагонист <b>Chloe</b> (сватья) · ментор <b>Joo</b></p>
+      </div>
+      <div class="meta-row">
+        <span class="num">9:16</span><span class="num">~2:34</span><span class="num">18 shots</span><span class="accent-chip">cold-open детонация</span>
+      </div>
+      <p class="logline">Публично униженная сватьёй («ты лучше выйдешь в кадре сидя»), мать жениха отбирает себе полный mother-son dance — и входит в зал в красном платье, которое месяц назад не сходилось.</p>
+
+      <div class="arc">
+        <div class="arc-track"></div>
+        <div class="arc-labels"><span class="from">Стыд · серое</span><span class="to">Достоинство · красное</span></div>
+      </div>
+
+      <div class="beats">
+        <div class="beat"><span class="bt">0:00</span><span class="bk">Hook</span><span class="bd">Молния красного платья клинит, шёлк трещит по шву</span></div>
+        <div class="beat"><span class="bt">0:18</span><span class="bk">Turn</span><span class="bd">Подслушала сговор Chloe: «усажу за колонну»</span></div>
+        <div class="beat"><span class="bt">0:36</span><span class="bk">Решение</span><span class="bd">Ночь: кроссовки из 90-х — «Thirty days. The old way»</span></div>
+        <div class="beat"><span class="bt">1:00</span><span class="bk">Дно</span><span class="bd">Падает в лужу под дождём — грязные ладони</span></div>
+        <div class="beat"><span class="bt">1:06</span><span class="bk">Продукт</span><span class="bd">Joo: «Two years ago, that was me» + «The plan takes twenty-eight» — proof + связка 28↔30</span></div>
+        <div class="beat"><span class="bt">1:34</span><span class="bk">Δ 1→28</span><span class="bd">Монтаж: серое → цвет; кроссовки у крыльца не нужны</span></div>
+        <div class="beat"><span class="bt">2:00</span><span class="bk">Payoff</span><span class="bd">Молния идёт вверх одним движением</span></div>
+        <div class="beat"><span class="bt">2:24</span><span class="bk">Ask</span><span class="bd">«They told me to wear something forgiving. I didn't» → «Check your phones»</span></div>
+      </div>
+
+      <blockquote class="quote">
+        <p>"The strongest woman I know. My mom."</p>
+        <cite>Daniel — в микрофон, голос дрожит · F17</cite>
+      </blockquote>
+    </article>
+
+    <!-- 2 · SATURDAYSWIM -->
+    <article class="card" style="--accent:#3FA9C9;">
+      <div class="card-head">
+        <div class="card-index">
+          <span class="idx">STORY 02</span>
+          <span class="fmt">Tai Chi Femme · Skeleton X</span>
+        </div>
+        <h2 class="card-title mono">SaturdaySwim</h2>
+        <p class="card-who"><b>Helen, 59</b> — бабушка · «доброжелатель» <b>Kate</b> (дочь) · внучка <b>Mia</b></p>
+      </div>
+      <div class="meta-row">
+        <span class="num">9:16</span><span class="num">~2:30</span><span class="num">17 shots</span><span class="accent-chip">зеркало: суббота ×2</span>
+      </div>
+      <p class="logline">Одна суббота проигрывается дважды. Прогон 1 — Helen «зритель на бортике»: нога соскальзывает на лесенке при всех, бросок мяча внучке не долетает до воды. Прогон 2 — те же биты, оплаченные: она в воде, кружит внучку, ловит мяч.</p>
+
+      <div class="arc">
+        <div class="arc-track"></div>
+        <div class="arc-labels"><span class="from">Зритель · кардиган</span><span class="to">В воде · купальник</span></div>
+      </div>
+
+      <div class="beats">
+        <div class="beat"><span class="bt">0:00</span><span class="bk">Hook</span><span class="bd">Всплеск — вода кипит, Helen застыла на стуле</span></div>
+        <div class="beat"><span class="bt">0:16</span><span class="bk">Эскалация</span><span class="bd">Нога соскальзывает на лесенке — шлепок, все обернулись → бросок мяча не долетает до воды</span></div>
+        <div class="beat"><span class="bt">0:44</span><span class="bk">Дно</span><span class="bd">Видео семейного чата: все в воде, её в кадре нет. Немой hold</span></div>
+        <div class="beat"><span class="bt">0:54</span><span class="bk">Продукт</span><span class="bd">«Wish I could—», стирает → инструктор-ровесница с экрана: «Nine minutes a day» → печать плана</span></div>
+        <div class="beat"><span class="bt">1:14</span><span class="bk">Δ 1→28</span><span class="bd">Монтаж: вычёркивает дни на сетке, срывает бирку с купальника</span></div>
+        <div class="beat"><span class="bt">1:38</span><span class="bk">Зеркало</span><span class="bd">Стул пуст. Helen в воде, ловит мяч, кружит Mia</span></div>
+        <div class="beat"><span class="bt">2:12</span><span class="bk">Ask</span><span class="bd">Rita: «What did you do?» → «Put your number in»</span></div>
+        <div class="beat"><span class="bt">2:20</span><span class="bk">Payoff</span><span class="bd">Прыгают в воду вместе — рисунок «ME + GRANDMA»</span></div>
+      </div>
+
+      <blockquote class="quote">
+        <p>"Since I stopped watching the bags."</p>
+        <cite>Helen — кружа внучку, не оборачиваясь · F13</cite>
+      </blockquote>
+    </article>
+
+    <!-- 3 · REUNION -->
+    <article class="card" style="--accent:#2FA87A;">
+      <div class="card-head">
+        <div class="card-index">
+          <span class="idx">STORY 03</span>
+          <span class="fmt">Tai Chi Femme · Skeleton B</span>
+        </div>
+        <h2 class="card-title mono">Reunion</h2>
+        <p class="card-who"><b>Margaret, 62</b> — «Best Dancer '84» · без злодея · триггер <b>Ray</b> · VO-дневник</p>
+      </div>
+      <div class="meta-row">
+        <span class="num">9:16</span><span class="num">~2:05</span><span class="num">15 shots</span><span class="accent-chip">флешфорвард → smash-cut</span>
+      </div>
+      <p class="logline">Внутренний конфликт без антагониста. «Лучшая танцорша выпуска '84» отказывается ехать на 40-летие — и тайком возвращает себе танцпол, чтобы приехать той, кем её помнят.</p>
+
+      <div class="arc">
+        <div class="arc-track"></div>
+        <div class="arc-labels"><span class="from">Отказ себе</span><span class="to">Возврат на танцпол</span></div>
+      </div>
+
+      <div class="beats">
+        <div class="beat"><span class="bt">0:00</span><span class="bk">Hook</span><span class="bd">Пик свинга → smash-cut: та же женщина задыхается после 3 шагов</span></div>
+        <div class="beat"><span class="bt">0:15</span><span class="bk">Эскалация</span><span class="bd">Колено уводит → голосовое Diane: «Best Dancer — no pressure!»</span></div>
+        <div class="beat"><span class="bt">0:31</span><span class="bk">Дно</span><span class="bd">Срыв под пластинку, немой hold → «NOT ATTENDING»</span></div>
+        <div class="beat"><span class="bt">0:50</span><span class="bk">Продукт</span><span class="bd">Сама, с вызовом: «Nine minutes. Fine»</span></div>
+        <div class="beat"><span class="bt">0:58</span><span class="bk">Δ W1→5</span><span class="bd">VO-дневник: «Knees stopped arguing with me»</span></div>
+        <div class="beat"><span class="bt">1:22</span><span class="bk">Reverse</span><span class="bd">Рвёт карточку → «SEE YOU THERE»</span></div>
+        <div class="beat"><span class="bt">1:36</span><span class="bk">Payoff</span><span class="bd">Свинг с Ray — пик из F1 оплачен вживую</span></div>
+        <div class="beat"><span class="bt">1:46</span><span class="bk">Ask</span><span class="bd">Diane: «Spill it» → кладёт телефон экраном вверх</span></div>
+      </div>
+
+      <blockquote class="quote">
+        <p>"Turns out she never left."</p>
+        <cite>Margaret — VO, последняя запись дневника · F15</cite>
+      </blockquote>
+    </article>
+
+    <!-- 4 · GRANDSONFISHING -->
+    <article class="card" style="--accent:#C98A3C;">
+      <div class="card-head">
+        <div class="card-index">
+          <span class="idx">STORY 04</span>
+          <span class="fmt">Tai Chi Macho · Skeleton C</span>
+        </div>
+        <h2 class="card-title mono">GrandsonFishing</h2>
+        <p class="card-who"><b>Frank, 63</b> — дед, бывший «мотор» вылазок · носитель продукта <b>Tom</b> (сын) · внук <b>Leo</b></p>
+      </div>
+      <div class="meta-row">
+        <span class="num">9:16</span><span class="num">~1:55</span><span class="num">13 shots</span><span class="accent-chip">muted-first · ~5 реплик</span>
+      </div>
+      <p class="logline">Тихая драма, рассказанная телом. Дед мягко высвободил руку внука у лодки — и втайне, стыдясь, возвращает себе причал, чтобы снова стать главой семейных вылазок.</p>
+
+      <div class="arc">
+        <div class="arc-track"></div>
+        <div class="arc-labels"><span class="from">Тихая сдача</span><span class="to">Снова глава вылазок</span></div>
+      </div>
+
+      <div class="beats">
+        <div class="beat"><span class="bt">0:00</span><span class="bk">Hook</span><span class="bd">Не доходит до лодки — машет внуку «идите без меня»</span></div>
+        <div class="beat"><span class="bt">0:24</span><span class="bk">Эскалация</span><span class="bd">Ужин на одного, стоя у окна; выключает передачу про рыбалку</span></div>
+        <div class="beat"><span class="bt">0:32</span><span class="bk">Дно</span><span class="bd">Телефон с фото экраном вниз; сидит в темноте, немой hold</span></div>
+        <div class="beat"><span class="bt">0:42</span><span class="bk">Продукт</span><span class="bd">Tom кладёт телефон на колено: «Nine minutes a day»</span></div>
+        <div class="beat"><span class="bt">0:52</span><span class="bk">Δ 1→28</span><span class="bd">Тренируется втайне, озирается — потом в открытую</span></div>
+        <div class="beat"><span class="bt">1:16</span><span class="bk">Payoff</span><span class="bd">Несёт внука на плечах к причалу — руки свободны</span></div>
+        <div class="beat"><span class="bt">1:34</span><span class="bk">Возврат</span><span class="bd">Возвращает сыну телефон: «You were right»</span></div>
+        <div class="beat"><span class="bt">1:42</span><span class="bk">Ask</span><span class="bd">Сосед: «What is that you do?» → сам гуглит</span></div>
+      </div>
+
+      <blockquote class="quote">
+        <p>"You were right. Nine minutes."</p>
+        <cite>Frank — глядя на двор, скупо · F12</cite>
+      </blockquote>
+    </article>
+
+  </div>
+
+  <footer class="footer">
+    <div class="fl">
+      <span class="eyebrow">Shared close · все 4 сценария</span>
+      <h3>Один diegetic ask, один CTA</h3>
+    </div>
+    <div class="fr">Tap the link, take the free quiz, start tomorrow.</div>
+  </footer>
+
+  <p class="colophon">
+    <b>Формат</b> 9:16 vertical · кадр 5–10s · <b>Метод</b> Tai Chi walking, «nine minutes a day» · <b>Скелеты</b> A mentor-lift · X зеркало · B самооткрытие · C интервенция<br>
+    <b>Guardrail</b> реплики детей — только про совместное; фоновые дети не в фокусе; алкоголь не идентифицируется · <b>Источник</b> shotlists v2–v8 · creo-work/shotlists
+  </p>
+
+</div>
